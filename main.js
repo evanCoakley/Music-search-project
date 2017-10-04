@@ -17,8 +17,8 @@ search.addEventListener("keydown", function (event) {
         const albumCover =
           `<div class="boxes">
               <img src="${arr[i].artworkUrl100}" id="${arr[i].previewUrl}" />
-              <p>${arr[i].trackName}</p>
-              <p>${arr[i].artistName}</p>
+              <p>${arr[i].trackName}, ${arr[i].artistName}</p>
+              
           </div>`;
 
         displayResults.innerHTML += albumCover;
