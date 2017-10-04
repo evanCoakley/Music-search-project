@@ -1,3 +1,77 @@
 body {
   background-color: #60d9f1;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+input {
+  padding: 1rem .5rem .5rem .5rem;
+  font-size: 2rem;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+  outline: none;
+}
+
+img {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  padding: .75rem;
+  width: 100%;
+  background-color: #746861;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  padding-left: 7rem;
+}
+
+.music-player {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.results {
+  flex: 1 75%;
+  padding-top: 1em;
+  height: 100%;
+  flex-wrap: wrap;
+  margin: 1.35em;
+}
+
+.boxes {
+  border: 1px solid black;
+  flex-flow: row wrap;
+  margin: 1em;
+  justify-content: center;
+  align-items: center;
+  height: 17em;
+  width: 17em;
+  padding: 3em;
+}
+
+.boxes img {
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 10em;
+  width: 15em;
+  margin: 30px 12px;
+  flex-basis: 20%;
 }

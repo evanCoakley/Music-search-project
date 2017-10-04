@@ -7,27 +7,33 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="wrapper">
     <header>
-      <h1>Really Awesome Music Site</h1>
+      <h1>Music Sampler</h1>
     </header>
-    <section class="player">
-      <audio class="music-player" controls="controls" src=""></audio>
-    </section>
-    <section class="search">
-      <form class="search-form">
-        <input type="text">
-      </form>
-    </section>
-    <section class="results">
-      <div class="grid">
+    <div class="container">
+
+      <section class="search">
+        <form class="search-form">
+          <input type="search" id="search" placeholder="Enter artist, album or track name">
+        </form>
+      </section>
+      <section class="player">
+        <audio class="musicPlayer" controls="controls" src="" autoplay></audio>
+      </section>
+      <section class=" results ">
+
+      </section>
+      <div class="grid ">
+
       </div>
 
 
-    </section>
+      </section>
+    </div>
   </div>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="main.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js "></script>
+  <script src="main.js "></script>
 </body>
 
 </html>

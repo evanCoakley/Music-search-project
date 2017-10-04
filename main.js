@@ -1,13 +1,43 @@
-/*
-  Here is a rough idea for the steps you could take:
-*/
-let player = querySelector(".player")
-let search = querySelector(".search")
-let grid = querySelector(".grid")
-let url = ("https://itunes.apple.com/search?")
 
-// 1. First select and store the elements you'll be working with
-// 2. Create your `submit` event for getting the user's search term
-// 3. Create your `fetch` request that is called after a submission
-// 4. Create a way to append the fetch results to your page
-// 5. Create a way to listen for a click that will play the song in the audio play
+let search = document.getElementById("search");
+let displayResults = document.querySelector(".results");
+
+search.addEventListener("keydown", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    displayResults.innerHTML = '';
+    let url = "https://itunes.apple.com/search?term=" + search.value;
+
+
+    axios.get(url).then(function (response) {
+      let arr = response.data.results;
+      for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i].artworkUrl100);
+
+        const albumCover =
+          `<div class="boxes">
+              <img src="${arr[i].artworkUrl100}" id="${arr[i].previewUrl}" />
+              <p>${arr[i].trackName}</p>
+              <p>${arr[i].artistName}</p>
+          </div>`;
+
+        displayResults.innerHTML += albumCover;
+      }
+    });
+  }
+});
+
+displayResults.addEventListener("click", function (e) {
+  if (e.target && e.target.nodeName == "IMG") {
+    let song = e.target.getAttribute("id");
+    let player = document.querySelector(".musicPlayer");
+    player.setAttribute("src", song);
+  }
+});
+
+
+
+
+
+
+
